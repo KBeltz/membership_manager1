@@ -1,0 +1,1 @@
+json.array! @login_attempts, partial: 'login_attempts/login_attempt', as: :login_attempt

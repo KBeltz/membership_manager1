@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Login Attempts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip address</th>
+      <th>Is successful</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @login_attempts.each do |login_attempt| %>
+      <tr>
+        <td><%= login_attempt.ip_address %></td>
+        <td><%= login_attempt.is_successful %></td>
+        <td><%= login_attempt.user %></td>
+        <td><%= link_to 'Show', login_attempt %></td>
+        <td><%= link_to 'Edit', edit_login_attempt_path(login_attempt) %></td>
+        <td><%= link_to 'Destroy', login_attempt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Login attempt', new_login_attempt_path %>

@@ -1,0 +1,1 @@
+json.partial! "belt_levels/belt_level", belt_level: @belt_level

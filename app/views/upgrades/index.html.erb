@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Upgrades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Type</th>
+      <th>Start date</th>
+      <th>Term</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @upgrades.each do |upgrade| %>
+      <tr>
+        <td><%= upgrade.student %></td>
+        <td><%= upgrade.type %></td>
+        <td><%= upgrade.start_date %></td>
+        <td><%= upgrade.term %></td>
+        <td><%= link_to 'Show', upgrade %></td>
+        <td><%= link_to 'Edit', edit_upgrade_path(upgrade) %></td>
+        <td><%= link_to 'Destroy', upgrade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Upgrade', new_upgrade_path %>

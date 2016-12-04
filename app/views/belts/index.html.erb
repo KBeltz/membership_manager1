@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Belts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Belt level</th>
+      <th>Start date</th>
+      <th>Is active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @belts.each do |belt| %>
+      <tr>
+        <td><%= belt.student %></td>
+        <td><%= belt.belt_level %></td>
+        <td><%= belt.start_date %></td>
+        <td><%= belt.is_active %></td>
+        <td><%= link_to 'Show', belt %></td>
+        <td><%= link_to 'Edit', edit_belt_path(belt) %></td>
+        <td><%= link_to 'Destroy', belt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Belt', new_belt_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_id: 
+  belt_level_id: 
+  start_date: 2016-12-03
+  is_active: false
+
+two:
+  student_id: 
+  belt_level_id: 
+  start_date: 2016-12-03
+  is_active: false

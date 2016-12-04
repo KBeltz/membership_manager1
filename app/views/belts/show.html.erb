@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @belt.student %>
+</p>
+
+<p>
+  <strong>Belt level:</strong>
+  <%= @belt.belt_level %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @belt.start_date %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @belt.is_active %>
+</p>
+
+<%= link_to 'Edit', edit_belt_path(@belt) %> |
+<%= link_to 'Back', belts_path %>

@@ -1,0 +1,2 @@
+module LoginAttemptsHelper
+end

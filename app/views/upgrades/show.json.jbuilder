@@ -1,0 +1,1 @@
+json.partial! "upgrades/upgrade", upgrade: @upgrade

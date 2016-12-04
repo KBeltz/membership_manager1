@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @upgrade.student %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @upgrade.type %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @upgrade.start_date %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @upgrade.term %>
+</p>
+
+<%= link_to 'Edit', edit_upgrade_path(@upgrade) %> |
+<%= link_to 'Back', upgrades_path %>

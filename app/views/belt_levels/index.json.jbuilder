@@ -1,0 +1,1 @@
+json.array! @belt_levels, partial: 'belt_levels/belt_level', as: :belt_level

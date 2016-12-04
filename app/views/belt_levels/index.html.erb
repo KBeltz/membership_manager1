@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Belt Levels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @belt_levels.each do |belt_level| %>
+      <tr>
+        <td><%= belt_level.name %></td>
+        <td><%= link_to 'Show', belt_level %></td>
+        <td><%= link_to 'Edit', edit_belt_level_path(belt_level) %></td>
+        <td><%= link_to 'Destroy', belt_level, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Belt level', new_belt_level_path %>

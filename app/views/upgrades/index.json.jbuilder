@@ -1,0 +1,1 @@
+json.array! @upgrades, partial: 'upgrades/upgrade', as: :upgrade

@@ -1,0 +1,29 @@
+<%= form_for(@login_attempt) do |f| %>
+  <% if @login_attempt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@login_attempt.errors.count, "error") %> prohibited this login_attempt from being saved:</h2>
+
+      <ul>
+      <% @login_attempt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ip_address %><br>
+    <%= f.text_field :ip_address %>
+  </div>
+  <div class="field">
+    <%= f.label :is_successful %><br>
+    <%= f.check_box :is_successful %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

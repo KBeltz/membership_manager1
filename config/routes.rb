@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :memberships
+  resources :guardians
+  resources :belts
+  resources :attendances
+  resources :courses
+  resources :upgrades
+  resources :students
+  resources :account_types
+  resources :belt_levels
+  resources :membership_types
+  resources :login_attempts
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
