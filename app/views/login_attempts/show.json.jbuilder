@@ -1,1 +1,0 @@
-json.partial! "login_attempts/login_attempt", login_attempt: @login_attempt

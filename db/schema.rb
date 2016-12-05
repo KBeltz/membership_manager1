@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161204162219) do
+ActiveRecord::Schema.define(version: 20161205002346) do
 
   create_table "account_types", force: :cascade do |t|
     t.string   "name"
@@ -98,16 +98,6 @@ ActiveRecord::Schema.define(version: 20161204162219) do
   end
 
   add_index "guardians", ["student_id"], name: "index_guardians_on_student_id"
-
-  create_table "login_attempts", force: :cascade do |t|
-    t.string   "ip_address"
-    t.boolean  "is_successful"
-    t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "login_attempts", ["user_id"], name: "index_login_attempts_on_user_id"
 
   create_table "membership_types", force: :cascade do |t|
     t.string   "name"
